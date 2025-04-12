@@ -1,6 +1,6 @@
 # Data Quality Analyzer - Streamlit & DuckDB 
 
-Este é um aplicativo criado para análise de qualidade de dados, utilizando **Streamlit**, **PostgreSQL** e **Docker**. O projeto permite analisar dados de um banco PostgreSQL, verificando aspectos como completude, unicidade, conformidade com expressões regulares e distribuição de valores. A aplicação utiliza o **DuckDB** para consultas e visualização dos dados.
+Este é um aplicativo criado para análise de qualidade de dados, utilizando **Streamlit**, **DuckDB**,**PostgreSQL** e **Docker**. O projeto permite analisar dados de um banco PostgreSQL, verificando aspectos como completude, unicidade, conformidade com expressões regulares e distribuição de valores. A aplicação utiliza o **DuckDB** para consultas e visualização dos dados.
 
 ## Funcionalidades
 
