@@ -2,11 +2,13 @@ version: '3.8'
 
 services:
   app:
-    build: .
+    build:
+      context: ./docker  # O diretório de build é o diretório onde o Dockerfile está localizado
+      dockerfile: Dockerfile  # O nome do Dockerfile dentro da pasta 'docker'
     ports:
       - "8501:8501"
     volumes:
-      - .:/app
+      - ./docker:/app  # Monta o diretório 'docker' para o diretório '/app' no contêiner
     depends_on:
       - db
     networks:
@@ -22,7 +24,7 @@ services:
       - "5432:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./docker/init.sql:/docker-entrypoint-initdb.d/init.sql
     networks:
       - app_net
 
